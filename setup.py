@@ -16,6 +16,7 @@ with open(BASEDIR.joinpath("README.md"), "r") as fp:
     LONG_DESCRIPTION = fp.read()
 
 PACKAGES = find_packages()
+PACKAGE_DATA = {"email_backup": ["management/commands/*.py"]}
 
 with open(BASEDIR.joinpath("requirements.txt"), "r") as fp:
     INSTALL_REQUIRES = fp.read().splitlines()
@@ -49,6 +50,7 @@ setup(
     long_description_content_type="text/markdown",
     license="MIT license",
     packages=PACKAGES,
+    package_data=PACKAGE_DATA,
     include_package_data=True,
     install_requires=INSTALL_REQUIRES,
     extras_require=EXTRAS_REQUIRE,
