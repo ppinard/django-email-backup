@@ -1,0 +1,2 @@
+[run]
+omit=email_backup/_version.py
