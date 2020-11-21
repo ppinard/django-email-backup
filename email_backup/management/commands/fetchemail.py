@@ -105,4 +105,4 @@ class Command(BaseCommand):
 
                     model.save()
                 except:
-                    logger.exception(f"Error when saving {message_number}")
+                    logger.error(f"Error when saving {message_number}")
